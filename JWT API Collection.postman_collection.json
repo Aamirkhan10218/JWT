@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "d447bb8b-28d9-47fe-b073-9132b049eb30",
+		"name": "JWT API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "GetToken",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44392/api/Login/UserLogin?userName=AamirKhan&password=Allah",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44392",
+							"path": [
+								"api",
+								"Login",
+								"UserLogin"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "AamirKhan"
+								},
+								{
+									"key": "password",
+									"value": "Allah"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Check Token",
+			"item": [
+				{
+					"name": "TestToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBYW1pciBLaGFuIiwiZW1haWwiOiJBYW1pcktoYW5ARXhhbXBsZS5jb20iLCJqdGkiOiJjODY3NTM0OC1hYjk2LTRkYjItYWQzYi0xMDNhNjYwZDQ3YjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTYwNTI5NTg0MywiaXNzIjoiSldUIiwiYXVkIjoiSldUIn0.GAGS5xcK2lXDsfYRcELBhXr9ouU3w29w9P8cmOefMiE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44392/api/Login/Get",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44392",
+							"path": [
+								"api",
+								"Login",
+								"Get"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
